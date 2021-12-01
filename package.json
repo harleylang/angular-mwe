@@ -1,0 +1,34 @@
+{
+  "name": "angular-mwe",
+  "version": "1.0.0",
+  "description": "angular-mwe from scratch",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ng serve",
+    "build": "ng build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harleylang/angular-mwe.git"
+  },
+  "author": "Harley Lang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harleylang/angular-mwe/issues"
+  },
+  "homepage": "https://github.com/harleylang/angular-mwe#readme",
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^13.0.3",
+    "@angular/cli": "^13.0.3",
+    "typescript": "~4.4.3"
+  },
+  "dependencies": {
+    "@angular/common": "^13.0.2",
+    "@angular/compiler": "^13.0.2",
+    "@angular/core": "^13.0.2",
+    "@angular/platform-browser": "^13.0.2",
+    "@angular/platform-browser-dynamic": "^13.0.2",
+    "rxjs": "^7.4.0",
+    "zone.js": "^0.11.4"
+  }
+}
