@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 const html = `
     <div>
-        <span>letter will go here</span>
+        <span>{{letter}}</span>
+        <br/>
     </div>
 `;
 
@@ -11,7 +12,7 @@ const html = `
     template: html,
 })
 class CharacterTile {
-
+    @Input() letter: string = '';
 };
 
 export default CharacterTile;
