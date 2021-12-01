@@ -22,7 +22,6 @@
             "main": "src/main.ts",
             "tsConfig": "tsconfig.build.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -81,7 +80,6 @@
             "main": "src/test.ts",
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
