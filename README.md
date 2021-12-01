@@ -3,6 +3,8 @@ A minimal working example of an Angular app, from scratch.
 
 ## development
 
+Reference for building from scratch rather than cli: [here](https://medium.com/angular-in-depth/setting-up-angular-from-scratch-1f518c65d8ab).
+
 ### dependencies
 
 * typescript: `npm i -D typescript`
