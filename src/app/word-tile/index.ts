@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 const html = `
     <button (click)="handleClick()">
@@ -12,8 +12,9 @@ const html = `
 })
 class WordComponent {
     @Input() word: string = '';
+    @Output() clicked = new EventEmitter();
     handleClick = () => {
-        console.log('clicked!')
+        this.clicked.emit(this.word);
     };
 };
 
