@@ -6,9 +6,16 @@ const html = `
     </button>
 `;
 
+const styles = `
+    button {
+        color: blue;
+    }
+`;
+
 @Component({
     selector: 'word-tile',
     template: html,
+    styles: [styles],
 })
 class WordComponent {
     @Input() word: string = '';
