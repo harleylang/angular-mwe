@@ -1,7 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 const html = `
-    <button (click)="handleClick()">
+    <button 
+        *ngIf="selected !== word"
+        (click)="handleClick()">
         {{word}}
     </button>
 `;
@@ -20,6 +22,7 @@ const styles = `
 })
 class WordButton {
     @Input() word: string = '';
+    @Input() selected: string = '';
     @Output() clicked = new EventEmitter();
     handleClick = () => {
         this.clicked.emit(this.word);

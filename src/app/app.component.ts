@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 const html = `
-    <h1>Selected word: {{name}}</h1>
+    <h1>Selected word: {{selected}}</h1>
     <section id='characters'>
         <character-tile 
-            *ngFor="let letter of name.split('')" 
+            *ngFor="let letter of selected.split('')" 
             [letter]="letter"
             >
         </character-tile>
@@ -14,7 +14,8 @@ const html = `
         <word-button
             *ngFor="let word of words" 
             [word]="word"
-            (clicked)="handleWordClicked($event)"
+            [selected]="selected"
+            (clicked)="handleButtonClicked($event)"
             >
         </word-button>
     </section>
@@ -38,9 +39,9 @@ class AppComponent {
         'Harley',
         'testing'
     ];
-    name = 'Hello';
-    handleWordClicked = (word: string) => {
-        this.name = word;
+    selected = 'Hello';
+    handleButtonClicked = (word: string) => {
+        this.selected = word;
         console.log(`Updated "AppComponent.name" to: ${word}`);
     };
 };
