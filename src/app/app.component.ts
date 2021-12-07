@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 const html = `
-    <h1>Hello, {{name}}</h1>
+    <h1>Selected word: {{name}}</h1>
     <section id='characters'>
         <character-tile 
             *ngFor="let letter of name.split('')" 
@@ -9,11 +9,15 @@ const html = `
             >
         </character-tile>
     </section>
-    <word-tile 
-        [word]="name"
-        (clicked)="handleWordClicked($event)"
-        >
-    </word-tile>
+    <section id='words'>
+        <h2>Choose a word to split:</h2>
+        <word-button
+            *ngFor="let word of words" 
+            [word]="word"
+            (clicked)="handleWordClicked($event)"
+            >
+        </word-button>
+    </section>
 `;
 
 const styles = `
@@ -28,9 +32,16 @@ const styles = `
     styles: [styles]
 })
 class AppComponent {
-    name = 'world!';
+    words = [
+        'Hello',
+        'world!',
+        'Harley',
+        'testing'
+    ];
+    name = 'Hello';
     handleWordClicked = (word: string) => {
-        console.log(word);
+        this.name = word;
+        console.log(`Updated "AppComponent.name" to: ${word}`);
     };
 };
 

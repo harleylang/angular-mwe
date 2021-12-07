@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import AppComponent from './app.component';
 import CharacterTile from './character-tile';
-import WordTile from './word-tile';
+import WordButton from './word-button';
 
 @NgModule({
   imports: [
@@ -12,7 +12,7 @@ import WordTile from './word-tile';
   declarations: [
     AppComponent,
     CharacterTile,
-    WordTile,
+    WordButton,
   ],
   bootstrap: [
     AppComponent
